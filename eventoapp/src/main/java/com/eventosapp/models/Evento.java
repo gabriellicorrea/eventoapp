@@ -3,6 +3,7 @@ package com.eventosapp.models;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,9 @@ import javax.persistence.OneToMany;
 public class Evento implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
+	
+	@OneToMany( mappedBy="evento", cascade=CascadeType.ALL, orphanRemoval=true)
+	private List<Convidado> convidados;
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
