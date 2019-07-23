@@ -8,15 +8,31 @@
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
+		<link rel="stylesheet" href="style/styleCss"/>
+	
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<title>EventosApp</title>
 </head>
 <body>
+	<header>
+	<nav>
+	  	<div class="nav-wrapper">
+	      	<a href="#" class="brand-logo">Cadastro de Eventos</a>
+	      	<ul id="nav-mobile" class="right hide-on-med-and-down">
+	        	<li><a href="/eventos" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Lista Eventos</a></li>
+	    
+      		</ul>
+    	</div>
+  	</nav>
+	</header>
 
+	<div class="container">
 	<h1> Cadastro de Eventos</h1>
-	<h3><a href="/eventos" class="waves-effect waves-light btn"><i class="material-icons left">navigate_before</i> Lista de Eventos</a></h3>
+		<h3><a href="/eventos" class="waves-effect waves-light btn"><i class="material-icons left">navigate_before</i> Lista de Eventos</a></h3>
+	</div>
+	<div class="container formEvento">
 		<form class="container" action="" method="post">
 			Nome: <input type="text" value="" name="nome">
 			<div class="row">
@@ -29,9 +45,11 @@
 				<div class="input-field col s3">
 					Horario: <input type="time" value="" name="horario">
 				</div>
+				<button type="submit">Salvar</button>
 			</div>
-			<button type="submit">Salvar</button>
+			
 		</form>
+		</div>
 
 	 <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
